@@ -7,6 +7,7 @@ h1{
   margin-bottom: 20px;
   color: #f3c623;
   letter-spacing: .6rem;
+  text-shadow: 2px 2px 2px #f3237d;
 }
 
 p{
@@ -14,19 +15,25 @@ p{
   margin-bottom: 5px;
   font-weight: bold;
   font-size: large;
+  letter-spacing: 0.02rem;
 }
 
 h3{
   color: #10375c;
+  text-shadow: 1px 1px 1px mediumslateblue;
+  /* color: #ff007f;
+  text-shadow: 1px 1px 1px #ffbf00; */
   margin-top: 2px;
   margin-bottom: 5px;
   font-size: larger;
+  letter-spacing: .1rem;
 }
 
 li{
   color: #844685;
   font-weight: bold;
   font-size: large;
+  letter-spacing: 0.02rem;
 }
 
 .container{
@@ -37,10 +44,15 @@ li{
   flex: 1;
   /* background-image: url(cool-background.png);
   background-size: cover; */
-  padding: 20px 40px;
+  padding: 10px 40px;
   text-align: left;
   justify-content: center;
-  margin: 0;
+  margin-top: 5vh;
+}
+
+.left{
+  display: inline-block;
+  border: 2px yellowgreen;
 }
 
 .right{
@@ -53,6 +65,7 @@ li{
 
 #particles-js canvas {
     display: block;
+    background-color: rgba(255, 250, 250, 0.712);
     vertical-align: bottom;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -69,4 +82,25 @@ li{
     z-index: -10;
     top: 0;
     left: 0
+}
+
+.social-media{
+  margin-right: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.social-media a{
+  color: #48128f;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px 10px;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.social-media a:hover{
+  transition: 0.5s;
+  color: white;
+  opacity: 1;
 }
