@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Particles</title>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="stylesheet.css">
+        <!-- <link rel="stylesheet" href="typography.scss"> -->
+        <!-- <script src="script.js"></script> -->
+    </head>
+
+    <body>
+        <div id="particles-js"></div>
+          <div class="container">
+            <div class="cropped left">
+                <img src="circle-cropped.png" alt="My picture">
+            </div>
+
+            <div class="right">
+                <div class="bio">
+                    <h1>Kushal Bhanot</h1>
+                    <p>Namaste! I'm a freshman at Chitkara University.</p>
+                    <p>I'm proficient in C, Python and JavaScript, and I like to solve real world problems using Machine Learning, Deep Learning and Data.</p>
+                    <p><h3>Courses:</h3>
+                        <ul>
+                            <li>Deep Learning and Neural Networks</li>
+                            <li>Data Science Master Course</li>
+                            <li>Machine Learning</li>
+                            <li>Responsive Web Design</li>
+                        </ul>
+                    </p>
+                    <p><h3>Tools:</h3>
+                        <ul>
+                            <li>Tableau</li>
+                            <li>Git</li>
+                            <li>Command Line</li>
+                            <li>Canva</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="bottom socials">
+                  
+                </div>
+        </div>
+
+        </div>
+        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 40,
+            "density": {
+                "enable": true,
+                "value_area": 500
+            }
+        },
+        "color": {
+            "value": "#ff9800"
+        },
+        "shape": {
+            "type": "polygon",
+            "stroke": {
+                "width": 2,
+                "color": "#ff9800"
+            },
+            "polygon": {
+                "nb_sides": 6
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": true
+        },
+        "size": {
+            "value": 10,
+            "random": true
+        },
+        "line_linked": {
+            "enable": false,
+            "distance": 200,
+            "color": "#ff5722",
+            "opacity": 0.3,
+            "width": 2
+        },
+        "move": {
+            "enable": true,
+            "speed": 5,
+            "direction": "bottom",
+            "random": true,
+            "straight": true,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": [
+                    "grab",
+                    "bubble"
+                ]
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 0.7
+                }
+            },
+            "bubble": {
+                "distance": 600,
+                "size": 12,
+                "duration": 1,
+                "opacity": 0.8,
+                "speed": 2
+            },
+            "repulse": {
+                "distance": 400,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 20
+            },
+            "remove": {
+                "particles_nb": 10
+            }
+        }
+    },
+    "retina_detect": true
+});
+          var count_particles, stats, update;
+          stats = new Stats();
+          stats.setMode(0);
+          stats.domElement.style.position = "absolute";
+          stats.domElement.style.left = "0px";
+          stats.domElement.style.top = "0px";
+          document.body.appendChild(stats.domElement);
+          count_particles = document.querySelector(".js-count-particles");
+          update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+              count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+          };
+          requestAnimationFrame(update);
+          </script>
+    </body>
+</html>
